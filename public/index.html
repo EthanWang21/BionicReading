@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bionic Reading Filter</title>
+</head>
+<body>
+    <h1>Bionic Reading Filter</h1>
+    <textarea id="inputText" rows="5" cols="50" placeholder="Enter text..."></textarea>
+    <br>
+    <button onclick="applyFilter()">Apply Bionic Reading Filter</button>
+    <br>
+    <h2>Filtered Text</h2>
+    <div id="filteredText"></div>
+
+    <script>
+        function applyFilter() {
+            const inputText = document.getElementById('inputText').value;
+
+            // Make a POST request to the Node.js server
+            fetch('http://localhost:3000/applyBionicReadingFilter', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ inputData: inputText }),
+            })
+            .then(response => response.text())
+            .then(data => {
+                // Convert ANSI escape codes to HTML tags
+                const htmlContent = data.replace(/\033\[1m/g, '<strong>')
+                                       .replace(/\033\[0m/g, '</strong>');
+
+                // Display the modified text
+                document.getElementById('filteredText').innerHTML = htmlContent;
+            })
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+</html>
