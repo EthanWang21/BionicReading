@@ -22,17 +22,11 @@ server.js: Node.js server file using Express to handle HTTP requests. It serves 
 
 Getting Started
 
-Clone the repository:
-git clone https://github.com/EthanWang21/BionicReading
-
 Navigate to the project directory:
 cd BionicReading
 
-Install dependencies:
-npm install
-
-Run the Node.js server:
-node server.js
+In a Linux environment, run the server:
+./server
 
 Open your web browser and visit http://localhost:3000 to access the Bionic Reading Filter application.
 
@@ -47,11 +41,4 @@ Toggle dark mode on/off with the "Toggle Dark Mode" button.
 
 Adjust the font size using the font size slider.
 
-Click the "Download as Word Document" button to download the filtered text as a Word document.
-
-Additional Notes
-The application uses the FileSaver.js library to enable the download of filtered text as a Word document.
-
-Please note that the appearance of text may vary in different Word processors due to the interpretation of HTML and CSS styles.
-
-Feel free to explore and enhance the project! If you encounter any issues or have suggestions for improvement, please let me know.
+If you encounter any issues or have suggestions for improvement, please let me know.
