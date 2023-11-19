@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bionic Reading Filter</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <h1>Bionic Reading Filter</h1>
+
+    <!-- Slogan -->
+    <h2><i class="emphasized">Elevate Your Reading</i></h2>
+
+    <!-- Input Area -->
+    <textarea id="inputText" rows="5" >Bionic Reading is a new method facilitating the reading process by guiding the eyes through text with artificial fixation points. As a result, the reader is only focusing on the highlighted initial letters and lets the brain center complete the word. In a digital world dominated by shallow forms of reading, Bionic Reading aims to encourage a more in-depth reading and understanding of written content. Click the filter button to try!</textarea>
+    <br>
+
+    <!-- Filter Button -->
+    <button onclick="bionicReader.applyFilter()">Apply Bionic Reading Filter</button>
+
+    <!-- Color Picker -->
+    <input type="color" id="colorPicker" value="#0000ff" title="Pick a color">
+
+    <!-- Change Color Button -->
+    <button onclick="bionicReader.changeColor()">Change Bold Color</button>
+
+    <!-- Toggle Dark Mode Button -->
+    <button onclick="bionicReader.toggle()">Toggle Dark Mode</button>
+    <br>
+
+    <!-- Font Size Slider -->
+    <label for="fontSizeSlider">Font Size:</label>
+    <input type="range" id="fontSizeSlider" min="12" max="24" step="1" value="18">
+
+    <!-- Result Section -->
+    <div id="resultBox">
+        <h3>Filtered Text</h3>
+        <div id="filteredText"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="BionicReader.js"></script>
+</body>
+</html>
