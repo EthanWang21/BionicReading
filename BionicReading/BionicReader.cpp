@@ -4,11 +4,6 @@
 #include <cctype>
 #include <algorithm>
 
-bool BionicReader::isSpecialCharacter(char c) {
-    const std::string specialCharacters = "[];'<>,(){}\\|/`'!@#$%^&*-_=+:\"";
-    return c != '.' && !std::isalpha(c) && specialCharacters.find(c) == std::string::npos;
-}
-
 bool BionicReader::endsWithNumber(const std::string &word) {
     return word.size() >= 3 && word.back() == ']' && std::isdigit(word[word.size() - 2]) && word[word.size() - 3] == '[';
 }
