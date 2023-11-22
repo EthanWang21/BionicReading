@@ -6,8 +6,8 @@
 class BionicReader {
 public:
     BionicReader(); // Constructor
-
-    bool endsWithNumber(const std::string &word);
+    std::string cleanWord(const std::string &word);
+    std::string applyFormatting(const std::string &cleanedWord);
     void cleanAndApplyBionicReadingFilter(std::string &text);
 };
 
