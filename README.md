@@ -4,14 +4,14 @@ Overview
 The Bionic Reading Filter project is a web application that facilitates a reading method known as Bionic Reading. This method guides the eyes through text using artificial fixation points, allowing the reader to focus on highlighted initial letters and letting the brain center complete the word. The application aims to encourage a more in-depth reading and understanding of written content.
 
 Project Structure
-Frontend (public folder)
+(public folder)
 BionicReader.js: JavaScript file containing the implementation of the BionicReader class. This class handles the application of the Bionic Reading filter, changing bold colors, and toggling dark mode.
 
 index.html: HTML file representing the main structure of the web page. It includes input areas, buttons for applying the filter, changing colors, toggling dark mode, and a section to display the filtered text. It also provides a font size slider for adjusting the text size.
 
 styles.css: CSS file defining the styles for the HTML elements, including the appearance of the text, buttons, and the results container.
 
-Backend (BionicReading folder)
+(BionicReading folder)
 BionicReader.cpp: C++ file implementing the BionicReader class. This class provides functions for cleaning and applying the Bionic Reading filter to text.
 
 BionicReader.h: Header file declaring the BionicReader class and its member functions.
@@ -25,7 +25,7 @@ Getting Started
 Navigate to the project directory:
 cd BionicReading
 
-In a Linux environment, run the server:
+In a Linux terminal, run the server:
 ./server
 
 Open your web browser and visit http://localhost:3000 to access the Bionic Reading Filter application.
@@ -40,5 +40,7 @@ Use the "Change Bold Color" button to modify the color of the boldened part.
 Toggle dark mode on/off with the "Toggle Dark Mode" button.
 
 Adjust the font size using the font size slider.
+
+The filtered text box should be in the center of the screen displaying the text modified by the Bionic Filter.
 
 If you encounter any issues or have suggestions for improvement, please let me know.
