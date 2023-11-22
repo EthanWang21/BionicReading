@@ -1,32 +1,39 @@
+/* General styling for the entire body */
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     margin: 20px;
 }
 
+/* Styling for title */
 h1 {
-    color: black;
+    color: red;
     text-align: center;
 }
 
+/* Styling for slogan */
 h2 {
     color: black;
     font-size: 16px;
     text-align: center;
-    margin-bottom: 30px; 
+    margin-bottom: 30px;
 }
 
+/* Styling for filtered text */
 h3 {
     color: black;
 }
 
+/* Styling for text area */
 textarea {
     width: 80%;
     padding: 10px;
     margin-bottom: 10px;
+    margin: 0 auto;
     font-size: 16px;
 }
 
+/* Styling for buttons */
 button {
     padding: 10px;
     font-size: 16px;
@@ -37,41 +44,46 @@ button {
     margin-right: 10px;
 }
 
+/* Styling for button hover effect */
 button:hover {
     background-color: #45a049;
 }
 
+/* Styling for color picker */
 #colorPicker {
     margin-right: 10px;
 }
 
 /* Custom class for styling the boldened part */
 .customBold {
-    font-weight: bold;
-    color: rgb(0, 0, 0); /* You can set the default color here */
+    font-weight: 775;
+    color: rgb(0, 0, 0);
 }
 
+/* Styling for dark mode */
 .darkMode {
     background-color: black;
     color: white;
 }
 
+/* Styling for dark mode headings */
 .darkMode h1,
 .darkMode h2,
 .darkMode h3 {
     color: white;
 }
 
-/* Style for the results container */
+/* Styling for the results container */
 #resultBox {
-    width: 20%;
+    width: 30%;
     border: 2px solid darkgreen;
-    padding: 10px; 
-    margin-top: 20px; 
-    overflow-wrap:break-word;
+    padding: 20px;
+    margin: 0 auto;
+    overflow-wrap: break-word;
+    text-align: center;
 }
 
-/* Style for the filtered text inside the box */
+/* Styling for the filtered text inside the box */
 #filteredText {
     font-size: 18px;
 }

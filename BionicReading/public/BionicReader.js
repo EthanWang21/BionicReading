@@ -1,4 +1,5 @@
 class BionicReader {
+    // Applies the filter to the text
     applyFilter() {
         const inputText = document.getElementById('inputText').value;
 
@@ -12,9 +13,7 @@ class BionicReader {
         })
         .then(response => response.text())
         .then(data => {
-            // Convert ANSI escape codes to HTML tags
-            const htmlContent = data.replace(/\033\[1m/g, '<span class="customBold">')
-                                   .replace(/\033\[0m/g, '</span>');
+            const htmlContent = data;
 
             // Insert a line break every 6 words
             const words = htmlContent.split(/\s+/);
@@ -32,6 +31,7 @@ class BionicReader {
         .catch(error => console.error('Error:', error));
     }
 
+    // Applies a color of choice to the text
     changeColor() {
         const colorPicker = document.getElementById('colorPicker');
         const newColor = colorPicker.value;
@@ -42,7 +42,8 @@ class BionicReader {
             element.style.color = newColor;
         });
     }
-
+    
+    // Toggles dark mode
     toggle() {
         var element = document.body;
         element.classList.toggle("darkMode");
